@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marks Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Marks Calculator</h1>
+
+        <input type="number" id="tamil" placeholder="Tamil Marks">
+
+        <input type="number" id="english" placeholder="English Marks">
+
+        <input type="number" id="maths" placeholder="Maths Marks">
+
+        <input type="number" id="science" placeholder="Science Marks">
+
+        <input type="number" id="social" placeholder="Social Marks">
+
+        <button onclick="calculate()">
+            Calculate
+        </button>
+
+        <h2 id="result"></h2>
+
+    </div>
+
+<script>
+
+function calculate(){
+
+let tamil=Number(document.getElementById("tamil").value);
+
+let english=Number(document.getElementById("english").value);
+
+let maths=Number(document.getElementById("maths").value);
+
+let science=Number(document.getElementById("science").value);
+
+let social=Number(document.getElementById("social").value);
+
+let total=tamil+english+maths+science+social;
+
+let average=total/5;
+
+document.getElementById("result").innerHTML=
+"Total = "+total+
+"<br>Average = "+average.toFixed(2);
+
+}
+
+</script>
+
+</body>
+
+</html>
